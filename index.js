@@ -21,6 +21,8 @@ const pairBrackets = (num) =>{
  }
 
  console.log(pairBrackets(5))
+ console.log(pairBrackets(3))
+ console.log(pairBrackets(18))
 
 
 
@@ -43,4 +45,6 @@ console.log(min)
 // 4) напишите функцию-стрелку, которая принимает неограниченное количество аргументов и возвращает их произведение.
 
 
-const mult = (...args) => args.reduce((res, n) => res*n);
+const mult = (...args) => args.length>0 ? args.reduce((res, n) =>  n>0 ? res*n : res) : false;
+
+console.log(mult(3,2,0,9))
